@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>git Syntax</title>
+</head>
+<body>
+    <article>
+        <a href="../AC14-HTML-day01/index.html">回首頁</a>
+        <h1><strong>git Syntax</strong></h1>
+        <section>
+            <h2>git General</h2>
+                <table>
+                    <tr>
+                        <th>git</th>
+                        <td>--version</td>
+                        <td>//log out version of git</td>
+                    </tr>
+                    <tr>
+                        <td>git</td>
+                        <td>log</td>
+                        <td>//log out information</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>log --oneline </td>
+                        <td>//log out information in oneline</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+                    git --version                         //log out version of git
+                    
+                    git log                               //log out information
+                        log --oneline                     //log out information in oneline
+                        
+                    git reflog                            //log out HEAD footstep
+                    
+                    git config --list                     //status of config
+                    git config --global user.name "name"  //set up username in global scope
+                        config --global user.email "email"//set up email in global scope
+                        config --local user.name "name"   //set up username in local scope
+                        config --local user.email "email" //set up email in local scope
+                        
+                    rm                                    //remove
+                    rm -f                                 //force remove
+                    -r                                 //remove all dir under
+                    -rf                                //force to remove all dir under
+                    
+                    git init                              //intial git to folders
+                    git status                            //check git status (untrack, tracked)
+                    
+                    git blame filename                    //log all line information
+                    
+                    git reset name                        //reset to somewhere, default mixed, 
+                        reset name --mixed                //drop to working directory
+                        reset name --soft                 //drop to staging area
+                        reset name --hard                 //delete drop
+                    git reset HEAD^                       //rerurn last step
+                        reset HEAD^^                      //return last two step
+                        reset HEAD~50                     //return 50 step back
+                        
+                    ^ = -1 = Caret
+                    ~ = -n = Tilde
+        </section>
+            
+            ###### Working Directory
+                git add                               //add untrack files to tracked
+                    add .                             //. = here
+                    add --all                         //add all
+                    add -A                            //add all
+                    
+                git restore                           //give up the change in working directory
+                    restore .                         //restore . = here
+                
+            
+            ###### Staging Area
+            
+                git commit                            //commit tracked files to Repository
+                    commit --message "message"
+                    commit -m        "message"
+                              
+                                 ex. "WIP - member system" (work in progess)
+                                     "#23 bug fixed"
+                              
+            ###### Repository
+                git push                              //push online
+                git pull                              //pull down
+             
+            ## git Branch
+                
+                git branch                            //search branch
+                    branch branchname id              //create new branch
+                    branch -d branchname              //delete branchname
+                    branch -D branchname              //force delete branchname
+                    
+                git checkout                          //switch branch or restore files
+                git switch branchname                 //switch branch
+                    switch commitname --detach        //switch to commit name
+                    
+                git merge branchname                  //(self) merge branchname
+                    merge branchname --no-ff          //(self) merge with no fastforward
+                    merge branchname -m "message"     //(self) merge with message
+                    
+                git rebase branchname                 //(self) rebase to the base of commit 
+                git reset ORIG_HEAD                   //easy way to be back before rebase 
+            
+            ## git Branch Conflict
+            ```
+            merge -> fix the conflict -> add -> commit
+            rebase -> fix the conflict -> add ->
+            > git rebase --continue                 //accect the fixed
+            > git rebase --skip                     //?
+            > git rebase --abort                    //abort the fixed
+            
+            git chechout img.jpg --ours            //use (self) img
+            git checkout img.jpg --theirs          //use (Branch been merge's) img
+            ```
+                    
+            ## Other tips
+                control + l                           //clear console
+                        + w                           //del word
+                        + u                           //del line
+                        + r                           //history search</#>
+    </article>
+</body>
+</html>

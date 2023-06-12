@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Nav */
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .logo {
+    padding: 20px 20px;
+    font-weight: bold;
+    font-size: large;
+}
+
+nav .rnav {
+    padding: 20px 20px;
+}
+
+nav .rnav a {
+    padding: 0 20px;
+    text-decoration: none;
+    color: black;
+}
+
+nav .rnav a:hover {
+    cursor: pointer;
+    padding: 0 20px;
+    text-decoration: underline;
+    color: black;
+}
+
+/* 近期課程 section */
+section.recent_class {
+    background-color: rgb(41, 48, 62);
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+/* 近期課程 contant */
+.recent_class .container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.recent_class h3 {
+    color: white;
+    margin-bottom: 30px;
+}
+
+.class_container {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-evenly;
+}
+
+.classblock {
+    width: 270px;
+    margin: 0 auto;
+    padding: 15px;
+    background-color: white;
+    border-radius: 30px;
+}
+
+.classblock img {
+    width: 100%;
+    margin-bottom: 20px;
+    
+}
+
+.classblock p {
+    margin: 20px;
+}
+
+.classblock p:first-of-type {
+    border: 1px solid black;
+    opacity: 0.5;
+    display: inline;
+}
+
+.classblock p:last-of-type {
+    border-top: 1px solid black;
+    opacity: 0.5;
+    padding-top: 20px;
+}
+
+/* 看更多課程按鈕 */
+.recent_class .container .moreclassbtn {
+    margin: 25px auto;
+    padding:20px;
+    width: 100%;
+    text-align: center;
+}
+
+a.moreclass {
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 15px 30px;
+    margin: 30px auto 20px; 
+}
+
+a.moreclass:hover {
+    cursor: pointer;
+}
+
+a.moreclass:active {
+    margin-top: 35px;
+}
+
+
+/* 學習路徑 */
+section.learning_path {
+    background-color: white;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+.learning_path .container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.learning_path .heading {
+    width: 70%;
+    margin-bottom: 30px;
+}
+
+.learning_path h2 {
+    margin-bottom: 30px;
+}
+
+/* learning block */
+.path_container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.pathblock {
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px;
+    padding: 15px;
+    width: 35%;
+    background-color: white;
+}
+
+.pathblock img {
+    width: 70%;
+}

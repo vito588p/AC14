@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ol {
+    display: flex;
+    flex-flow: row wrap;
+    list-style: none;
+    width: 5em;
+    font-size: 60px;
+}
+
+div:nth-of-type(odd) li:nth-of-type(even) {
+    color: red;
+    
+}
+
+div:nth-of-type(even) li:nth-of-type(odd){
+    color: red;
+}

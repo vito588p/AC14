@@ -1,0 +1,31 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+.box {
+    /* width: 200px; */
+    height: 200px;
+    font-size: 20px;
+    background-color: aqua;
+    /* border: 20px solid black; */
+    writing-mode: vertical-rl;
+}
+
+.parent {
+    width: 600px;
+    height: 600px;
+    background-color: #ccc;
+    display: flex;
+    flex-flow: row wrap;
+    direction: rtl;
+}
+
+.item {
+    width: 150px;
+    /* height: 150px; */
+    background-color: #fa0;
+    margin: 2px;
+    font-size: 50px;
+}

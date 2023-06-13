@@ -33,26 +33,29 @@ a.logoword:hover{
 nav .logo {
     padding: 20px 20px;
     font-weight: bold;
-    font-size: large;
+    font-size: 22px;
 }
 
 nav .rnav {
-    padding: 20px 20px;
+    display: flex;
 }
 
 .rnav a {
-    padding: 0 20px;
+    padding: 20px 20px;
     text-decoration: none;
     color: black;
+    border-bottom: 4px solid transparent;
+    display: inline-block;
 }
 
 .rnav a:hover {
     cursor: pointer;
-    padding: 0 20px;
-    text-decoration: none;
+    /* padding: 0 20px; */
+    /* text-decoration: none; */
     color: rgb(255, 19, 62);
     transition-timing-function: ease-in-out;
     transition-delay: 150ms;
+    border-bottom-color: rgb(255, 19, 62);
 }
 
 /* Main */
@@ -294,6 +297,5 @@ section.learning_path {
 .pathblock .pathwording a:hover {
     cursor: pointer;
     text-decoration: underline;
-    font-size: larger;
     
 }

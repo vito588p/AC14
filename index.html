@@ -4,31 +4,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portrait</title>
+    <title>My path to Developer</title>
+    <link rel="stylesheet" href="source/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/072abd7f8f.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
+        <div class="namelogo">
+            <a href="#">Weber Chen</a>
+        </div>
         <nav>
-            <div>
-                <a href="#">Home</a>
+            <div class="mnav">
+                <!-- <a href="#">Home</a> -->
                 <a href="AC14-git/gitclass.html">git Syntax</a>
-                <a href="AC14-HTML/htmlclass.html">HTML</a>
-                <a href="AC14-HTML/class_schedule.html">屏東前進國小課表</a>
-                <a href="AC14-CSS/css.html">CSS day 1</a>
+                <div class="dropdown">
+                    <button class="dropbtn">HTML 
+                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                    </button>
+                    <div class="droplink">
+                      <a href="AC14-HTML/htmlclass.html">HTML 學習雜記</a>
+                      <a href="AC14-HTML/class_schedule.html">屏東前進國小課表</a>
+                    </div>
+                  </div>
+                <div class="dropdown">
+                    <button class="dropbtn">CSS
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="droplink">
+                        <a href="AC14-CSS/css.html">CSS 學習雜記</a>
+                        <a href="AC14-CSS/test.html">Test</a>
+                        <a href="AC14-CSS/test2.html">Test2</a>
+                        <a href="AC14-CSS/test3.html">Test3</a>
+                        <a href="AC14-CSS/test4.html">Test4</a>
+                        <a href="AC14-CSS/css_practice.html">CSS practice</a>
+                        <a href="AC14-CSS/css_homework.html">CSS_Homework</a>
+                    </div>
+                </div>                
                 <a href="AC14-Javascript/js.html">Javascript</a>
-                <a href="AC14-CSS/test.html">Test</a>
-                <a href="AC14-CSS/test2.html">Test2</a>
-                <a href="AC14-CSS/test3.html">Test3</a>
-                <a href="AC14-CSS/css_practice.html">CSS practice</a>
-                <a href="AC14-CSS/css_homework.html">CSS_Homework</a>
+                <a href="#">Ruby</a>
+                <a href="#">About Me</a>
             </div>
         </nav>
     </header>
     <main>
-        <figure>
-            <img src="source/me.jpeg" width="200" alt="Weber">
-            <figcaption>Portarait of Me</figcaption>
-        </figure>   
+        <section class="selfsection">
+            <div class="selfcontainer">
+                <div class="protrait">
+                    <figure>
+                        <img src="source/img/me.jpeg" width="300" alt="Photo of me">
+                    </figure>  
+                </div>
+                <article class="selfintro">
+                    <p>
+                        Hello, my name is Weber, and I am from Taiwan. <br><br>
+                        Although I have a background in technology, my career began in marketing. I have worked as a marketing manager in the gaming industry for a few years and also in retail e-commerce for several years. <br><br> I am in the process of shifting my career focus from marketing to development. <br><br> Wish me luck and happy coding!
+                    </p>
+                </div>
+            </div>
+        </section>
+         
       
     </main>
 </body>

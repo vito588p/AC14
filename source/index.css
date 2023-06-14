@@ -1,21 +1,119 @@
+/* reset */
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-ol {
+/* color set 
+parent bg #341A04
+color #2C365E
+2rn color tan
+bg #FDF1E7
+
+
+/* header */
+.namelogo {
+    width: 100%;
+    background-color: #341A04;
+    text-align: center;   
+}
+
+.namelogo a {
+    color: #F0FFFF;
+    font-family: 'Monoton', cursive;
+    font-size: 3rem;
+    text-decoration: none;
+}
+
+nav {
     display: flex;
-    flex-flow: row wrap;
-    list-style: none;
-    width: 5em;
-    font-size: 60px;
+    padding: 0px 20px;
+    background-color: #341A04;
 }
 
-div:nth-of-type(odd) li:nth-of-type(even) {
-    color: red;
+.mnav {
+    margin: 0 auto;
+}
+
+nav a {
+    text-decoration: none;
+    color: tan;
+    padding: 20px 12.5px;
+}
+
+nav a:hover, .dropdown:hover .dropbtn {
+    background-color: #FDF1E7;
+    color: #2C365E;
+  }
+
+/* nav dropdown setup */
+.dropdown {
+    display: inline-block;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: tan;
+    padding: 20px 12.5px;
+    background-color: inherit;
+    font-family: inherit;
+}
+
+.droplink {
+    display: none;
+    position: absolute;
+    background-color: #341A04;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 0 0 10px 10px;
+  }
+  
+  .droplink a {
+    padding: 10px 12.5px;
+    display: block;
+    text-align: left;
+  }
+
+  .droplink a:hover {
+    background-color: #FDF1E7;
+    color: #2C365E
+  }
+
+  .dropdown:hover .droplink {
+    display: block;
+  }
+
+
+/* main */
+/* section of self intro */
+.selfsection {
+    width: 100%;
+    background-color: #FDF1E7;
+}
+
+.selfcontainer {
+    width: 85%;
+    margin: 0 auto;
+    padding: 5rem 4rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px dotted ;
+}
+
+.protrait img {
+    border-radius: 10px;
+    box-shadow: 1px 1px #341A04;
+}
+
+article.selfintro {
+    width: 40%;
     
-}
-
-div:nth-of-type(even) li:nth-of-type(odd){
-    color: red;
+    color: #2C365E;
+    font-size: 1.5rem;
+    font-family:'Times New Roman', Times, serif
 }

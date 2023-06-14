@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            width: 500px;
+            height: 500px;
+            display: flex;
+            border: 4px solid;        
+        }
+
+        .con {
+            background-color: beige;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .block1 {
+            width: 100%;
+            display: flex;
+            align-items: end;
+            justify-content: center;
+        }
+
+        .block2 {
+            display: flex;
+            align-items: start;
+            justify-content: center;
+            width: 100%;
+        }
+
+        #one {
+            width: 100px;
+            height: 150px;
+            background-color: aqua;
+            flex-grow: 1;
+        }
+
+        #two {
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        }
+
+        #three {
+            width: 100px;
+            height: 120px;
+            background-color: aqua;
+            flex-grow: 2;
+        }
+        #four {
+            width: 100px;
+            height: 90px;
+            background-color: seagreen;
+        }
+        #five {
+            width: 100px;
+            height: 120px;
+            background-color: seagreen;
+        }
+        #six {
+            width: 100px;
+            height: 80px;
+            background-color: seagreen;
+        }
+
+        /* .item:nth-child(-n+3) {
+            align-self: flex-end;
+            background-color: red;
+        } */
+
+
+    </style>
+</head>
+<body>
+    <a href="../index.html">回首頁</a>
+    <div class="container">
+        <div class="con">
+            <div class="block1">
+                <div id="one" >1</div>
+                <div id="two" >2</div>
+                <div id="three" >3</div>
+            </div>
+            <div class="block2">
+                <div id="four" class="block2">4</div>
+                <div id="five" class="block2">5</div>
+                <div id="six" class="block2">6</div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>

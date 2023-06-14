@@ -1,0 +1,15 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+div:nth-of-type(odd) li:nth-of-type(even) {
+    color: red;
+    
+}
+
+div:nth-of-type(even) li:nth-of-type(odd){
+    color: red;
+}

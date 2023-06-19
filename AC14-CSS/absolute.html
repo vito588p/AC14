@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            border: 1px solid red;
+            position: relative;
+            width: 300px;
+        }
+
+        .card .info p {
+            padding: 10px;
+        }
+
+        .card .tag {
+            background-color: #fa0;
+            position: absolute;
+            padding: 2px 20px;
+            top: 10px;
+            left: -8px;
+            border-radius: 5px 5px 5px 0;
+        }
+
+        .card .tag::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 0;
+            position: absolute;
+            border-left: 8px solid transparent;
+            border-top: 8px solid #f80;
+            top: 100%;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html">回首頁</a>
+    <div class="card">
+        <div class="pic">
+            <img src="https://fakeimg.pl/300x200/200">
+        </div>
+        <div class="info">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, maiores totam quos similique sunt impedit, sapiente neque quasi officiis tempore aspernatur optio fuga natus. Excepturi facilis molestias deleniti rerum eos.</p>
+        </div>
+        <div class="tag">
+            五倍嚴選
+        </div>
+    </div>
+</body>
+</html>

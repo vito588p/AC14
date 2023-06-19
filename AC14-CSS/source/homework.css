@@ -45,7 +45,7 @@ nav .logo {
 nav .rnav {
     display: flex;
     font-size: 12px;
-    
+    margin-right: 15px;
 }
 
 .rnav a {
@@ -92,7 +92,8 @@ section.banner {
 
 /* Promote */
 section.promote {
-    margin: 40px 50px;
+    margin: 40px auto;
+    width: 100%;
 }
 
 .promote_container {
@@ -302,7 +303,7 @@ section.teachers .heading {
 section.media {
     width: 100%;
     background-color: rgb(249,250,251);
-    padding-bottom: 80px;
+    padding-bottom: 180px;
 }
 
 .media .heading h2{
@@ -353,11 +354,23 @@ section.media {
     color: rgb(255, 19, 62);
 }
 
-/* 短期課程 section */
+/* 短期課程 shortterm section */
 section.shortterm {
     width: 100%;
     background-color: rgb(41, 48, 62);
     padding: 80px 0;
+    border: 0;
+}
+
+/* 短期課程三角形區塊 triangle section */
+section.shortterm::before {
+    content: "";
+    display: block;
+    background-color: rgb(41, 48, 62);
+    width: 100%;
+    height: 180px;
+    clip-path: polygon(30% 0%, 100% 100%, 0% 100%);
+    transform: translateY(-259px);
 }
 
 .shortterm h2.heading {
@@ -403,6 +416,15 @@ section.shortterm {
     line-height: 2rem;
 }
 
+.rolling::before {
+    content: "";
+    display: block;
+    background-color: rgb(255, 19, 62);
+    height: 100px;
+    clip-path: polygon(70% 0%, 100% 100%, 0% 100%);
+    transform: translateY(-100px);
+}
+
 .rolling .shortblockcontent a {
     cursor: pointer;
     color: white;
@@ -423,7 +445,7 @@ section.shortterm {
     padding: 20px 10px;
 }
 
-.shortblockcontent:nth-child(2) {
+/* .shortblockcontent:nth-child(2) {
     z-index: 1;
     position: relative;
     left: 552px;
@@ -437,21 +459,27 @@ section.shortterm {
     left: 552px;
     top: -368px;
     padding: 20px 10px;
-}
+} */
 
 
 /* 近期課程 section */
 section.recent_class {
     background-color: rgb(41, 48, 62);
     width: 100%;
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
     padding: 20px;
 }
 
-/* .recent_class .container {
-    width: 1440px;
-    margin: 24px auto 4px;
-} */
+/* 近期課程下三角形區塊 triangle section */
+section.recent_class::after {
+    content: "";
+    display: block;
+    background-color: rgb(41, 48, 62);
+    width: 100%;
+    height: 200px;
+    clip-path: polygon(0% 0%, 100% 0%, 70% 100%);
+    transform: translateY(219px);
+}
 
 .recent_class h3 {
     color: white;
@@ -572,7 +600,9 @@ a.more:active {
 section.learning_path {
     background-color: white;
     margin-bottom: 40px;
-    padding: 20px;
+    margin-top: 220px;
+    padding: 20px; 
+    width: 100%;
 }
 
 .learning_path .container {
@@ -672,22 +702,28 @@ section.learning_path {
     font-size: 14px;
     /* opacity: 0.7; */
     /* margin-bottom: 20px; */
-    padding: 0 15px 15px;
+    padding: 0 0px 8px 15px;
 }
 
 .pathblock .pathwording a {
-    display: block;
     cursor: pointer;
     color: red;
     text-decoration: none;
-    padding: 0 15px 15px;
-    /* margin-bottom: 20px; */
+    padding: 0 0 0 15px;
+    margin-bottom: 20px;
+}
+
+.pathblock .pathwording span {
+    cursor: pointer;
+    color: red;
+    margin-bottom: 20px;
+    font-weight: 700;
 }
 
 .pathblock .pathwording a:hover {
     cursor: pointer;
     text-decoration: underline;
-    
+    padding-right: 15px;
 }
 
 /* 精選文章 section */
@@ -756,6 +792,66 @@ section.lownav {
     width: 100%;
     background-color: rgb(41, 48, 62);
     margin-top: 100px;
+}
+
+.footnav_container {
+    display: flex;
+    padding-top: 40px;
+}
+
+
+
+.footnav_container .address img{
+    display: block;
+    padding-right: 346px;
+    padding-bottom: 16px;
+}
+
+.footnav_container a {
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    padding-bottom: 8px;
+}
+
+.footnav_container a:hover {
+    color: rgb(255, 19, 62);
+    text-decoration: none;
+}
+
+.footnav_container .links {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.footnav_container .links .linkblock {
+    width: 33.3%;
+    padding-bottom: 64px;
+}
+
+.footnav_container .links ul {
+    list-style: none;
+    
+}
+
+.footnav_container .links ul h2 {
+    color: white;
+    width: 278px;
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}
+
+.footnav_container .links ul a {
+    text-decoration: none;
+    color: white;
+    line-height: 2rem;
+    font-size: 0.5rem;
+}
+
+.footnav_container .links ul a:hover {
+    text-decoration: none;
+    color: rgb(255, 19, 62);
+    line-height: 2rem;
 }
 
 .lowicon {

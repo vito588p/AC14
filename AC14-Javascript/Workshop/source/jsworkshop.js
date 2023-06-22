@@ -36,6 +36,12 @@ function run() {
         checkDom.setAttribute("id", idname);
         checkDom.checked = lSValue[0].checked
         checkDom.addEventListener("click", (e) => {
+            if (checkDom.ch){
+                textDom.setAttribute("style", "text-decoration: line-through")
+                textDom.style.opacity = 0.5;
+            } else {
+                textDom.removeAttribute("style", "text-decoration: line-through")
+            }
             lSValue[0].checked = checkDom.checked;
             localStorage.setItem(idname, JSON.stringify(lSValue))
         });
@@ -49,6 +55,7 @@ function run() {
         
 
         //create btns
+        //editbtn
         const editbtn = document.createElement("i");
         editbtn.setAttribute("class", "fa-solid fa-pen-to-square fa-lg ");
         editbtn.addEventListener("click", (e) => {
@@ -56,12 +63,23 @@ function run() {
                 textDom.removeAttribute("readOnly", "readOnly");
                 editbtn.setAttribute("class", "fa-solid fa-check fa-lg");
                 textDom.focus();
+                textDom.addEventListener("keyup", (e) => {
+                    if (e.code === "Enter"){
+                        textDom.setAttribute("readOnly", "readOnly");
+                        editbtn.setAttribute("class", "fa-solid fa-pen-to-square fa-lg"); 
+                        lSValue[0].text = textDom.value;
+                        localStorage.setItem(idname, JSON.stringify(lSValue));        
+                    }
+                })
             } else {
                 textDom.setAttribute("readOnly", "readOnly");
-                editbtn.setAttribute("class", "fa-solid fa-pen-to-square fa-lg"); 
+                editbtn.setAttribute("class", "fa-solid fa-pen-to-square fa-lg");
+                lSValue[0].text = textDom.text;
+                localStorage.setItem(idname, JSON.stringify(lSValue));   
             }
         })
 
+        //del btn
         const delbtn = document.createElement("i");
         delbtn.setAttribute("class", "fa-solid fa-trash fa-lg");
         delbtn.addEventListener("click", (e) => {
@@ -69,6 +87,7 @@ function run() {
             textDom.remove();
             editbtn.remove();
             delbtn.remove();
+            localStorage.removeItem(idname);
 
         })
 

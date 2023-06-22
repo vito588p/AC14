@@ -11,6 +11,12 @@ const delhome = document.querySelector(".delbtn"); // div delbtn區
 
 
 let nbox = 1;
+
+
+window.addEventListener("load", (event) => {
+    console.log("page is fully loaded");
+  });
+
 inputbox.addEventListener("keyup", (e) => {
     if (e.code === "Enter"){
         run();
@@ -74,7 +80,7 @@ function run() {
             } else {
                 textDom.setAttribute("readOnly", "readOnly");
                 editbtn.setAttribute("class", "fa-solid fa-pen-to-square fa-lg");
-                lSValue[0].text = textDom.text;
+                lSValue[0].text = textDom.value;
                 localStorage.setItem(idname, JSON.stringify(lSValue));   
             }
         })

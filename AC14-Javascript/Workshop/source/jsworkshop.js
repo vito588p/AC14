@@ -15,27 +15,51 @@ let nbox = 1;
 
 window.addEventListener("load", (event) => {
     console.log("page is fully loaded");
+    
+    
+    const keys = Object.keys(localStorage)
+    if (localStorage.length > 0){
+        for(let i = 0; i < keys.length; i++){
+            const storedData = localStorage.getItem(keys[i]);
+            const parsedData = JSON.parse(storedData);
+            // console.log(storedData);
+            console.log(parsedData);
+            console.log(keys);
+
+            run(keys[i], parsedData[0].checked, parsedData[0].text, parsedData[0].nbox)
+            
+        }
+    }
+    console.log(nbox);
   });
 
 inputbox.addEventListener("keyup", (e) => {
     if (e.code === "Enter"){
-        run();
+        if(inputbox.value == ""){
+            alert("請輸入代辦事項內容！");
+        } else {
+            run()
+        run(`listbox-${nbox}`, false, inputbox.value, nbox);
+        console.log(nbox);
+        }
     } 
 })
-addlist.addEventListener("click", (e) => {
-    run();
-    
-})
-
-function run() {
-    const idname = `listbox-${nbox}`
-    const lSKey = localStorage.getItem(idname);
-    const lSValue = [{checked: false, text: inputbox.value}];
-    console.log(lSKey);
-
+addlist.addEventListener("click", () => {
     if(inputbox.value == ""){
         alert("請輸入代辦事項內容！");
     } else {
+    run(`listbox-${nbox}`, false, inputbox.value, nbox);
+    console.log(nbox);
+    }
+})
+
+function run(id, boxstatus, todo, count) {
+    const idname = id;
+    const lSKey = localStorage.getItem(idname);
+    const lSValue = [{checked: boxstatus, text: todo, nbox: count}];
+    console.log(lSKey);
+
+   
         //create checkbox
         const checkDom = document.createElement("input");
         checkDom.setAttribute("type", "checkbox");
@@ -57,7 +81,7 @@ function run() {
         textDom.setAttribute("type", "text");
         textDom.setAttribute("id", idname);
         textDom.setAttribute("readOnly","readOnly");
-        textDom.setAttribute("value",inputbox.value);
+        textDom.setAttribute("value", todo);
         
 
         //create btns
@@ -102,18 +126,15 @@ function run() {
         texthome.appendChild(textDom);
         edithome.appendChild(editbtn);
         delhome.appendChild(delbtn);
-          
-    }
 
-
-    if (lSKey === null){
+    // if (lSKey === null){
         localStorage.setItem(idname, JSON.stringify(lSValue));
-    } else if (lSKey){
-        console.log(lSKey);
+    // } else if (lSKey){
+    //     console.log(lSKey);
         const newobj = {checked: false, text: inputbox.value};
-        lSValue.push(newobj);
-        localStorage.setItem(idname, JSON.stringify(lSValue))
-    }
+    //     lSValue.push(newobj);
+    //     localStorage.setItem(idname, JSON.stringify(lSValue))
+    // }
     inputbox.value = "";
     nbox = nbox + 1; 
 }

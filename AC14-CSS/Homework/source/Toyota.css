@@ -1,0 +1,411 @@
+:root {
+    font-size: 16px;
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+}
+
+main {
+    width: 100%;
+}
+
+.container {
+    width: 960px;
+    margin: 75px auto;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-top: 96px;
+    width: 100%;
+    padding-bottom: 40px;
+    font-weight: 700;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 1em;
+    height: 4px;
+    margin: 0 auto;
+    background-color: #000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a {
+    display: block;
+    width: 184px;
+    text-decoration: none;
+    font-size: 1.125rem;
+    line-height: 2.25rem;
+    color: #000;
+    border: 1px dotted #000;
+    /* border-bottom: 2px solid #BB0000; */
+}
+
+nav a:hover {
+    text-decoration: none;
+    font-size: 1.125rem;
+    line-height: 2.25rem;
+    color: white;
+    /* border: 1px dotted #000; */
+    /* background-color: #BB0000; */
+    /* border-bottom: 2px solid #BB0000; */
+    transition-delay: 1000ms;
+}
+
+nav a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 184px;
+    height: 2px;
+    background-color: #BB0000;
+}
+
+/* nav a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 184px;
+    height: 38px;
+    background-color: #BB0000;
+} */
+
+/*
+1.每一組區塊中限制最多僅能使用3個絕對定位
+2.文字一率使用文字
+*/
+section.control {
+    height: 815px;
+    margin-bottom: 75px;
+}
+
+section.safety {
+    height: 715px;
+    margin-bottom: 75px;
+}
+
+section.confortable {
+    height: 815px;
+    margin-bottom: 75px;
+}
+
+section.humanism {
+    height: 815px;
+    margin-bottom: 75px;
+}
+
+section.pride {
+    height: 815px;
+    margin-bottom: 75px;
+}
+/*      right       */
+/* heading */
+section.right .heading {
+    width: 355px;
+    height: 388px;
+    box-sizing: content-box;
+    position: relative;
+    z-index: 2;
+}
+
+section.right .heading .title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #BB0000;
+    color: white;
+}
+
+section.right .vertiword {
+    writing-mode: vertical-lr;
+    font-size: 9rem;
+    font-weight: 300;
+    line-height: 0.75em;
+}
+
+section.right .heading h2 {
+    font-size: 3.5rem;
+    font-weight: 300;
+    
+    padding-top: 10px;
+}
+
+section.right .heading .describe {
+    background-color: #000;
+    color: white;
+    padding: 15px 20px;
+}
+
+section.right .heading .describe h3{
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.4em;
+    letter-spacing: 1px;
+}
+
+section.right .heading .describe p{
+    font-size: 1.3rem;
+    font-weight: 100;
+    line-height: 1.7em;
+    /* padding-bottom: 40px; */
+}
+
+/* gray */
+section.right .gray {
+    width: 439px;
+    height: 290px;
+    float: right;
+    margin-top: 36px;
+    background-color: #eee;
+    z-index: -1;
+}
+
+/* img pic */
+section.right .pic {
+    display: flex;
+    align-items: center;
+}
+
+section.right .pic img:first-child {
+    position: relative;
+    top: -246px;
+    left: 185px;
+    z-index: 0;
+}
+
+section.right .pic img:last-child {
+    position: relative;
+    top: -246px;
+    left: 137px;   
+}
+
+section.right .pic img[alt*="乘坐舒適"] {
+    position: relative;
+    top: -215.5px;
+}
+
+section.right .pic img[alt*="引以為傲"] {
+    position: relative;
+    top: -215.5px;
+}
+
+/* spec */
+section.right .spec {
+    position: relative;
+    top: -276px;
+    left: 50px;
+    background-color: #eee;
+    width: 682px;
+    padding: 10px 25px;
+}
+
+section.right .hr {
+    width: 100%;
+}
+
+section.right .hr hr {
+    display: inline-block;
+    width: 450px;
+    height: 3px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    background-color: #FF0000;
+}
+
+section.right .spec h4 {
+    display: inline-block;
+    font-size: 1.1rem;
+    color: #CC0000;
+    line-height: 2.5em;
+}
+
+section.right .spec h5 {
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 2px 10px;
+    line-height: 1.5em;
+    letter-spacing: 1px;
+}
+
+section.right .spec li:nth-child(odd) {
+    list-style: none;
+    background-color: #000;
+    color: #eeeeeeee;
+    width: fit-content;
+}
+
+section.right .spec li:nth-child(even)  {
+    list-style: square;
+    margin-left: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+section.right .spec li:nth-child(even)::marker {
+    color: red;
+    font-size: 0.1em;
+    
+}
+
+/*
+1.每一組區塊中限制最多僅能使用3個絕對定位
+2.文字一率使用文字
+*/
+
+/*      left        */
+/* heading */
+section.left .heading {
+    width: 355px;
+    height: 388px;
+    box-sizing: content-box;
+    position: relative;
+    left: 605px;
+    z-index: 2;
+}
+
+section.left .heading .title {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #BB0000;
+    color: white;
+}
+
+section.left .vertiword {
+    writing-mode: vertical-lr;
+    font-size: 9rem;
+    font-weight: 300;
+    line-height: 0.75em;
+    margin-left: auto;
+    vertical-align: top;
+
+}
+
+section.left .heading h2 {
+    font-size: 3.5rem;
+    font-weight: 300;
+    padding-left: 10px;
+    padding-top: 10px;
+    
+}
+
+section.left .heading .describe {
+    background-color: #000;
+    color: white;
+    padding: 15px 20px;
+}
+
+section.left .heading .describe h3{
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.4em;
+    letter-spacing: 1px;
+}
+
+section.left .heading .describe p{
+    font-size: 1.3rem;
+    font-weight: 100;
+    line-height: 1.7em;
+    padding-bottom: 40px;
+}
+
+/* gray */
+section.left .gray {
+    width: 518px;
+    height: 413px;
+    float: right;
+    margin-top: 61px;
+    position: relative;
+    right: 164px;
+    background-color: #eee;
+    z-index: -1;
+}
+
+/* pic */
+section.left .pic {
+    display: flex;
+    align-items: center;
+}
+
+section.left .pic img:first-child {
+    position: relative;
+    top: -215.5px;
+    z-index: 1;
+}
+
+section.left .pic img:last-child {
+    position: relative;
+    top: -215.5px;
+    left: -48px;   
+}
+
+/* spec */
+section.left .spec {
+    position: relative;
+    top: -276px;
+    left: 278px;
+    background-color: #eee;
+    width: 682px;
+    padding: 10px 25px;
+}
+
+section.left .hr {
+    width: 100%;
+}
+
+section.left .hr hr {
+    display: inline-block;
+    width: 450px;
+    height: 3px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    background-color: #FF0000;
+}
+
+section.left .spec h4 {
+    display: inline-block;
+    font-size: 1.1rem;
+    color: #CC0000;
+    line-height: 2.5em;
+}
+
+section.left .spec h5 {
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 2px 10px;
+    line-height: 1.5em;
+    letter-spacing: 1px;
+}
+
+section.left .spec li:nth-child(odd) {
+    list-style: none;
+    background-color: #000;
+    color: #eeeeeeee;
+    width: fit-content;
+}
+
+section.left .spec li:nth-child(even)  {
+    list-style: square;
+    margin-left: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+section.left .spec li:nth-child(even)::marker {
+    color: red;
+    font-size: 0.1em;
+    
+}

@@ -63,7 +63,7 @@ function run(id, boxstatus, todo, count) {
         //create checkbox
         const checkDom = document.createElement("input");
         checkDom.setAttribute("type", "checkbox");
-        checkDom.setAttribute("id", idname);
+        // checkDom.setAttribute("id", idname);
         checkDom.checked = lSValue[0].checked
         checkDom.addEventListener("click", (e) => {
             if (checkDom.ch){
@@ -79,7 +79,7 @@ function run(id, boxstatus, todo, count) {
         //create textbox
         const textDom = document.createElement("input");
         textDom.setAttribute("type", "text");
-        textDom.setAttribute("id", idname);
+        // textDom.setAttribute("id", idname);
         textDom.setAttribute("readOnly","readOnly");
         textDom.setAttribute("value", todo);
         

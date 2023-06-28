@@ -40,6 +40,15 @@ h1::after {
     background-color: #000;
 }
 
+.homepage {
+    text-decoration: none;
+    color: #000;
+}
+
+.homepage:hover {
+    color: #BB0000;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -53,7 +62,7 @@ nav a {
     line-height: 2.25rem;
     color: #000;
     border: 1px dotted #000;
-    /* border-bottom: 2px solid #BB0000; */
+    border-bottom: 2px solid #BB0000;
 }
 
 nav a:hover {
@@ -61,20 +70,20 @@ nav a:hover {
     font-size: 1.125rem;
     line-height: 2.25rem;
     color: white;
-    /* border: 1px dotted #000; */
-    /* background-color: #BB0000; */
-    /* border-bottom: 2px solid #BB0000; */
-    transition-delay: 1000ms;
+    border: 1px dotted #000;
+    background-color: #BB0000;
+    border-bottom: 2px solid #BB0000;
+    /* transition-delay: 1000ms; */
 }
 
-nav a::after {
+/* nav a::after {
     content: "";
     display: block;
     position: absolute;
     width: 184px;
     height: 2px;
     background-color: #BB0000;
-}
+} */
 
 /* nav a::after {
     content: "";

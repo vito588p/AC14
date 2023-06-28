@@ -3,19 +3,16 @@
 // 題目：完成函數的內容，把傳進去的秒數變成平常人類看的懂的時間格式
 
 function humanReadableTimer(seconds) {
-  // 實作在這裡
   let hrs = Math.floor(seconds / 3600);
   let mins = Math.floor((seconds % 3600) / 60);
   let secs = Math.floor((seconds % 3600) % 60);
 
-  const makeTwoDigits = (times) => {
-    if(times < 10){
-      return "0" + times;
-    } else {
-      return times;
-    };
+  const toReadable = (times) => {
+      return String(times).padStart(2, "0")
   };
-  return makeTwoDigits(hrs) + ":" + makeTwoDigits(mins) + ":" + makeTwoDigits(secs);
+  
+  return `${toReadable(hrs)}:${toReadable(mins)}:${toReadable(secs)}`;
+  
 };
 
 console.log(humanReadableTimer(0)) // 印出 00:00:00

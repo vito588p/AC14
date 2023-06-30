@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --col-count: 1;
+}
+
+.item {
+    background-color: #ccc;
+    border: 1px solid #000;
+    margin: 0 15px 15px 15px;
+    padding: 10px;
+    width: calc(100% / var(--col-count) - 30px);
+}
+
+.item img {
+    vertical-align: top;
+    width: 100%;
+}
+
+/* 
+手機 1
+平板 H 3
+平板 V 4
+桌機 5
+*/ 
+
+@media screen and (min-width: 768px) {
+    .wrap {
+        display: flex;
+        flex-wrap: wrap;  
+    }
+
+    .item {
+        /* width: calc(100% / 3 - 30px); */
+        --col-count: 3;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .item {
+        --col-count: 4;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .item {
+        --col-count: 5;
+    }
+}

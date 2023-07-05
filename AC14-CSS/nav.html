@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-header {
+            display: flex;
+            padding: 10px;
+            justify-content: space-between;
+            background-color: #000;
+            position: relative;
+        }
+        
+        .logo {
+            width: 80px;
+        }
+
+        .logo img {
+            vertical-align: middle;
+            width: 100%;
+        }
+
+        .logo a {
+            display: block;
+        }
+
+        #menu-switch {
+            display: none;
+        }
+
+        .main-nav a {
+            display: block;
+            text-decoration: none;
+            padding: 10px 20px;
+            color: #fff;
+        }
+
+      
+        @media screen and (max-width: 767px) {
+            .hb {
+                width: 40px;
+                height: 40px;
+                border: 1px solid #fff;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+
+            .hb span {
+                width: 80%;
+                height: 4px;
+                background-color: #fff;
+            }
+
+            .hb span:first-child {
+                opacity: 1;
+                transition: 0.5s 0.5s;
+            }
+            .hb span:nth-child(2) {
+                rotate: 0deg;
+                transition: 0.5s 0s;
+            }
+            .hb span:last-child {
+                opacity: 1;
+                transition: 0.5s 0.5s;
+            }
+
+            .hb:hover {
+                cursor: pointer;
+            }
+
+            #menu-switch:checked ~ .main-header .main-nav {
+                display: block;
+                height: auto;
+                opacity: 1;
+                transition: 1s 0.5s;
+            }
+
+            #menu-switch:checked ~ .main-header .hb span:first-child {
+                opacity: 0;
+                transition: 0.5s 0s;
+            }
+
+            #menu-switch:checked ~ .main-header .hb span:nth-child(2) {
+                rotate: 450deg;
+                transition: 0.5s 0.5s;
+            }
+
+            #menu-switch:checked ~ .main-header .hb span:last-child {
+                opacity: 0;
+                transition: 0.5s 0s;
+            }
+
+            .main-nav {
+                /* display: none; */
+                height: 0px;
+                opacity: 0;
+                position: absolute;
+                background-color: #888;
+                top: 100%;
+                left: 10px;
+                right: 10px;
+            }
+
+            .main-nav a + a {
+                border-top: 1px solid white;
+            }
+        }
+        @media screen and (min-width: 768px) {
+            .hb {
+                display: none;
+            }
+
+            .main-nav {
+                display: flex;
+            }
+            
+        }
+        
+    </style>
+    
+</head>
+<body>
+    <input type="checkbox" name="" id="menu-switch">
+    <header class="main-header">
+        <!-- logo -->
+        <div class="logo">
+            <a href="#">
+                <img src="https://fakeimg.pl/80x40/200">
+            </a>
+        </div>
+        <!-- hamberger -->
+        <label for="menu-switch" class="hb">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <!-- nav -->
+        <nav class="main-nav">
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </nav>
+    </header>   
+</body>
+</html>

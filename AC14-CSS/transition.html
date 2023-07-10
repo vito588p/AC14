@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: #f00;
+            position: relative;
+            transition: 1s;
+            /* transition-property: all; 寬、高、陰影、firefox 不支援 圖片淡入淡出*/
+            /* transition-duration: 1s; */
+            /* transition-delay: 0.3s; */
+            /* transition-timing-function: 0; */
+            /* transition: p dur delay timefunction; */
+            
+        }
+
+        .box:hover {
+            width: 300px;
+            height: 300px;
+            background-color: #00f;
+            border-radius: 50%;
+        }
+
+        .box .text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-color: #000;
+            color: #f0f;
+            transform: translateY(100%), scale(0);
+            opacity: 0;
+            transition: 1s;
+        }
+
+        .box:hover .text {
+            text-align: right;
+            align-self: center;
+            opacity: 1;
+            transform: translateY(0%), scale(1);
+            border-radius: 50%;
+        }
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: #00f;
+            margin: 5px;
+            position: relative;
+            animation: move 1s infinite alternate,
+                       toptop 0.3s infinite alternate,
+                       radius .5s infinite alternate;       
+        }
+
+        .box3 {
+            width: 200px;
+            height: 200px;
+            background-color: #fa0;
+            margin: 5px;
+            position: relative;
+            /* animation-name: ;
+            animation-duration: ;
+            animation-delay: ;
+            animation-timing-function: ;
+            animation-iteration-count: ;
+            animation-direction: reverse / alternate / alternate-reverse;
+            animation-fill-mode: if alternate 次數一定是偶數;
+            animation-play-state: ; */
+            /* animation: name dur delay tf intercount direct fillmode playstate; */
+            animation: move 1s infinite alternate,
+                       toptop 1s infinite alternate,
+                       radius 1s infinite alternate;
+        }
+        
+        @keyframes move {
+              0%{ left: 0px;}
+            100%{ left: 1000px;}
+        }
+        @keyframes toptop {
+              0%{ top: 0px;}
+            100%{ top: 500px}    
+        }
+        @keyframes radius {
+            0%{border-radius: 0%;}
+            100%{border-radius: 50%;}    
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, perspiciatis!
+        </div>
+    </div>
+
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="grid-system.css">
+    <style>
+        .container {
+            margin: 0 auto;
+        }
+
+         .mv {
+            width: 100%;
+            aspect-ratio: 560/315;
+        }
+
+        .mv iframe {
+            width: 100%;
+            height: 100%;
+            vertical-align: top;
+        }
+
+        .words {
+            width: 100%;
+            aspect-ratio: 560/315;
+            text-align: center;
+        }
+
+        @media screen and (min-width: 768px) {
+            .container {
+                margin: 0 auto;
+                display: flex;
+                align-content: center;
+                
+            }
+
+            .words {
+                align-self: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row row-col-1 row-col-md-2">
+            
+                <div class="mv">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/TEXZSzPpZqo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            
+        </div>
+        <div class="row row-col-1 row-col-md-2">
+            
+                <div class="words">
+                    <h3>title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda ipsa cupiditate, doloribus aut cum fuga officia necessitatibus eveniet temporibus voluptas.</p>
+                </div>
+            
+        </div>
+    </div>
+</body>
+</html>

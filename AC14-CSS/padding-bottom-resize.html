@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            font-size: 10vw; /* 10% viewport width, viewport height */
+
+        }
+
+
+        .mv {
+            width: 40%;
+            position: relative;
+        }
+
+        .mv::after {
+            content: "";
+            display: block;
+            width: 100%;
+            padding-bottom: 56.25%;
+            background-color: #f0f;
+        }
+
+        .mv iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .mv2 {
+            width: 50%;
+            aspect-ratio: 560/315;
+        }
+
+        .mv2 iframe {
+            width: 100%;
+            height: 100%;
+            vertical-align: top;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>五倍紅寶石</h1>
+    
+
+    <div class="mv">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/TEXZSzPpZqo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+
+    <div class="mv2">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/TEXZSzPpZqo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+
+    
+
+</body>
+</html>
